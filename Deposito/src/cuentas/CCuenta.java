@@ -1,12 +1,17 @@
 package cuentas;
+/**
+ * Clase para crear cuentas
+ * @author juann
+ */
 public class CCuenta {
-
-
+	
+	// Atributos
     private String nombre;
     private String cuenta;
     private double saldo;
     private double tipoInterés;
 
+    // Constructores
     public CCuenta()
     {
     }
@@ -18,11 +23,22 @@ public class CCuenta {
         saldo=sal;
     }
 
+    // Funciones o Métodos
+    
+    /**
+     * Devuelve el saldo de la cuenta
+     * @return
+     */
     public double estado()
     {
         return saldo;
     }
 
+    /**
+     * Sirve para ingresar una cantidad en la cuenta
+     * @param cantidad Cantidad a ingresar
+     * @throws Exception Excepcion que salta si el parametro introducido no es válido
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -30,6 +46,11 @@ public class CCuenta {
         saldo = saldo + cantidad;
     }
 
+    /**
+     * Sirve para retirar una cantidad en la cuenta
+     * @param cantidad Cantidad a ingresar
+     * @throws Exception Excepcion que salta si el parametro introducido no es válido
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -39,7 +60,8 @@ public class CCuenta {
         saldo = saldo - cantidad;
     }
 
-	public String getNombre() {
+	// Getters y Setters de los atributos de la clase
+    public String getNombre() {
 		return nombre;
 	}
 
